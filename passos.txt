@@ -9,3 +9,19 @@ Executar, no terminal, 1 por vez, em ordem:
     dotnet new mvc -o GCook
     dotnet new sln --name GCook 
     dotnet sln add GCook\GCook.csproj
+
+criando e executando migração:
+    verificar se tem a ferramenta:
+      dotnet ef
+
+instalar a ferramenta:
+    dotnet tool installl -global dotnet-ef --version 8.0.8
+
+atualizar a ferramenta:
+    dotnet toll update -global dotnet-ef --version 8.0.8
+
+    Criar uma migração:
+        dotnet ef migrations add criarBanco
+
+    Aplicar migração: 
+        dotnet ef database update

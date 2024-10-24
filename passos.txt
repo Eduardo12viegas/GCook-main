@@ -25,3 +25,8 @@ atualizar a ferramenta:
 
     Aplicar migração: 
         dotnet ef database update
+
+dotnet -aspnet -codegenerator controller -name 
+CategoriasController -m Categoria -dc AppDbContext
+ -outDir Controller -l  "~/Views/Shared/_LauoutAdmin.cshtml"
+

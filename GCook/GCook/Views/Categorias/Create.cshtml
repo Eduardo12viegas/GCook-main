@@ -33,6 +33,21 @@
                 <input type="submit" value="Salvar" class="btn btn-succes" />
                  <a asp-action="Index Class="ben btn-danger ms-2">Cancelar</a>
             </div>
+
+            @section Scripts {
+                <partial name="_ValidationScriptsParcial"></partial>
+                <script>
+                    window.addEventListener('load', function() {
+                        document.querySelector('input[type=file]')
+                        .addEventListener('change', function(){
+                            if (this.files && this.files[0]) {
+                                var img = document.getElementsById('Preview');
+                                img.src = URL.createObjectURL(this.files[0]);
+                            }
+                        })
+                    })
+                </script>
+            }
         </form>
     </div>
 </div>

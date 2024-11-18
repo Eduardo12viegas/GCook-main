@@ -1,7 +1,4 @@
 Configuração da Conta local do GIT:
-    git config --global user.name ropokoJr
-    git config --global user.email gustavomaganha112@gmail.com
-
     git config --global user.name Eduardo12viegas
     git config --global user.email eduardo.viegas@etec.sp.gov.br
 
@@ -12,7 +9,12 @@ Executar, no terminal, 1 por vez, em ordem:
 
 criando e executando migração:
     verificar se tem a ferramenta:
-      dotnet ef
+    dotnet ef
+
+ Pacotes a instalar
+    Microsoft.VisualStudio.Web.CodeGeneration.Design
+    Microsoft.EntityFrameworkCore.SqlServer
+
 
 instalar a ferramenta:
     dotnet tool installl -global dotnet-ef --version 8.0.8
@@ -29,4 +31,12 @@ atualizar a ferramenta:
 dotnet -aspnet -codegenerator controller -name 
 CategoriasController -m Categoria -dc AppDbContext
  -outDir Controller -l  "~/Views/Shared/_LauoutAdmin.cshtml"
+
+dotnet tool install --global dotnet-aspnet-codegenerator --version 8.0.6
+
+Gerar Controller e Views de CRUD:
+    dotnet-aspnet-codegenerator controller -name ReceitasController -m Receita -dc AppDbContext -outDir Controllers -l "~/Views/Shared/_LayoutAdmin.cshtml"
+
+
+
 
